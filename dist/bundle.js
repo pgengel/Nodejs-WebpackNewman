@@ -50,14 +50,14 @@ require("source-map-support").install();
 	// call newman.run to pass `options` object and wait for callback 
 	newman.run({
 	    collection: __webpack_require__(2),
-	    reporters: ['html'],
-	    reporter: { html: { export: 'newman-report.html' } },
+	    reporters: ['json', 'cli'],
 	    iterationCount: 2, 
 	
 	}, function (err) {
 	    if (err) { throw err; }
 	    console.log('collection run complete!');
 	});
+
 
 /***/ }),
 /* 1 */
